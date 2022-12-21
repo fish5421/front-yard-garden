@@ -24,5 +24,17 @@
     "sass": "^1.53.0",
     "tailwindcss": "^3.1.6",
     "vite": "^3.0.0"
-  }
+  },
+  "description": "![Simple TailwindCSS template preview](https://user-images.githubusercontent.com/2683512/96160974-f93aa780-0f16-11eb-9ce4-81d94b216be6.png)",
+  "main": "postcss.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fish5421/front-yard-garden.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fish5421/front-yard-garden/issues"
+  },
+  "homepage": "https://github.com/fish5421/front-yard-garden#readme"
 }
