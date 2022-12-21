@@ -14,6 +14,7 @@ export default defineConfig({
   resolve: {
     alias: [
       {
+        'firebase/app': 'firebase/app/dist/index.cjs.js',
         find: /^~.+/,
         replacement: (val) => {
           return val.replace(/^~/, "");
