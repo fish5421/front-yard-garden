@@ -18,7 +18,16 @@ const database = getDatabase(app);
   const [loader, setLoader] = useState(false);
   const [status, setStatus] = useState(undefined);
 
-
+  const validateForm = (message) => {
+    // Check for empty strings in the form data
+    if (message.trim().length !== 0) {
+      console.log('input value is NOT empty');
+      return true;
+    } else {
+      console.log('input value is empty');
+      return false;
+    }
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -26,19 +35,28 @@ const database = getDatabase(app);
     let obj = {
       email: email,
     };
-    const newPostKey = push(child(ref(database), "email")).key;
-    const updates = {};
-    updates["/" + newPostKey] = obj;
-    return update(ref(database), updates)
-    .then(() => {
-      setLoader(false);
-      setStatus({ type: 'success' });
-      setEmail("");
-    })
-    .catch((error) => {
-      setStatus({ type: 'error', message: error.message });
-      setLoader(false);
-    });
+    if (validateForm(email)) {
+      console.log('form is valid');
+      // Submit the form data
+      const newPostKey = push(child(ref(database), "email")).key;
+      const updates = {};
+      updates["/" + newPostKey] = obj;
+      return update(ref(database), updates)
+      .then(() => {
+        setLoader(false);
+        setStatus({ type: 'success' });
+        setEmail("");
+      })
+      .catch((error) => {
+        setStatus({ type: 'error', message: error.message });
+        setLoader(false);
+      });
+    } else {
+      // Display an error message or do something else to indicate that the form is invalid
+      console.log(setStatus)
+      setStatus({ type: 'error', message: 'Please fill out all fields.' });
+    }
+   
     
     // setLoader(true);
     // database.ref('emails').set({
