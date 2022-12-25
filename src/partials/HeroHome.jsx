@@ -52,7 +52,7 @@ function HeroHome() {
           <div className="text-center pb-12 md:pb-16">
             <h1 className="text-6xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4 text-green-600" data-aos="zoom-y-out">Gardyn</h1>
             <div className="max-w-3xl mx-auto">
-              <p className="text-2xl text-gray-600 mb-8" data-aos="zoom-y-out" data-aos-delay="150">Help busy families get started with <strong>consistant healthy eating</strong> with sustainable front yard gardening </p>
+              <p className="text-2xl text-gray-600 mb-8" data-aos="zoom-y-out" data-aos-delay="150">Help busy families get started with <strong>consistent healthy eating</strong> with sustainable front yard gardening </p>
               <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="zoom-y-out" data-aos-delay="300">
                 {/* <div>
                   <a className="btn text-white bg-green-600 hover:bg-green-700 w-full mb-4 sm:w-auto sm:mb-0" href="#0">Start free trial</a>
