@@ -18,7 +18,6 @@ function Header() {
   });
   }
 
-
   const [top, setTop] = useState(true);
 
   // detect whether user has scrolled the page down by 10px 
