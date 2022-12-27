@@ -9,7 +9,7 @@ import FeaturesElement from "../images/features-element.png";
 import { hotjar } from 'react-hotjar';
 
 
-hotjar.initialize(3228345, 6);
+hotjar.initialize(3302296, 6);
 
 if (hotjar.initialized()) {
   hotjar.identify('USER_ID', { userProperty: 'value' });
