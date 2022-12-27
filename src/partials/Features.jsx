@@ -6,6 +6,15 @@ import BuildingGB from "../images/building.jpg";
 import Harvest from "../images/harvesting.jpg";
 import FeaturesElement from "../images/features-element.png";
 
+import { hotjar } from 'react-hotjar';
+
+
+hotjar.initialize(3228345, 6);
+
+if (hotjar.initialized()) {
+  hotjar.identify('USER_ID', { userProperty: 'value' });
+}
+
 function Features() {
   const [tab, setTab] = useState(1);
 
